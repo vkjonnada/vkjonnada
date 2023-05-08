@@ -1,0 +1,1177 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.1018.2303                               -->
+<workbook original-version='18.1' source-build='2020.3.2 (20203.20.1018.2303)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='home_data' inline='true' name='federated.17rgeoj1bc9c971g4m79203sft8s' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='home_data' name='textscan.098d7yw004gjen13lawe11sc09a3'>
+            <connection class='textscan' directory='C:/Users/jmora3/Documents/cscc_ada/notebooks/Group Lab 1' filename='home_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='Parcel_SalesData.txt+ (Multiple Connections)' inline='true' name='federated.1nn3bgi1wzq8ow1286ofr006cn2o' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Charlotte NPA' name='excel-direct.1gcm1t70uvq3da0zqaj0c0b46aoy'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/jmora3/Documents/cscc_ada/notebooks/Group Lab 1/Lab 2/Charlotte NPA.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='HotSpots.csv' name='excel-direct.1vpcrnj160n0bv12jcydy1muy68m'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/jmora3/Documents/cscc_ada/notebooks/Group Lab 1/Lab 2/HotSpots.csv.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Sales by NPA' name='excel-direct.1057m9907297qr13zstyi1hct77e'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/jmora3/Documents/cscc_ada/notebooks/Group Lab 1/Lab 2/Sales by NPA.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Crime by NPA' name='textscan.0n2sive1y42q5h1dw1yyx0582lde'>
+            <connection class='textscan' directory='C:/Users/jmora3/Documents/cscc_ada/notebooks/Group Lab 1/Lab 2' filename='Crime by NPA.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='LowCrimeNPA' name='excel-direct.11sr1vw03relqs0zps2v40ktp4pf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/jmora3/Documents/cscc_ada/notebooks/Group Lab 1/Lab 2/LowCrimeNPA.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' name='Crime by NPA.csv+' type='union'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='NPA' />
+            <column datatype='integer' name='Total Crime 2018' />
+            <column datatype='integer' name='Violent_Crimes_2018' />
+            <column datatype='integer' name='Violent_Crimes_2017' />
+            <column datatype='integer' name='Violent_Crimes_2016' />
+            <column datatype='integer' name='Violent_Crimes_2015' />
+            <column datatype='integer' name='Violent_Crimes_2013' />
+            <column datatype='integer' name='Violent_Crimes_2011' />
+            <column datatype='integer' name='Property_Crimes_2018' />
+            <column datatype='integer' name='Property_Crimes_2017' />
+            <column datatype='integer' name='Property_Crimes_2016' />
+            <column datatype='integer' name='Property_Crimes_2015' />
+            <column datatype='integer' name='Property_Crimes_2013' />
+            <column datatype='integer' name='Property_Crimes_2011' />
+            <column datatype='integer' name='Disorder_Calls_2018' />
+            <column datatype='integer' name='Disorder_Calls_2017' />
+            <column datatype='integer' name='Disorder_Calls_2016' />
+            <column datatype='integer' name='Disorder_Calls_2015' />
+            <column datatype='integer' name='Disorder_Calls_2013' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='textscan.0n2sive1y42q5h1dw1yyx0582lde' name='Crime by NPA.csv' table='[Crime by NPA#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='NPA' ordinal='0' />
+              <column datatype='integer' name='Total Crime 2018' ordinal='1' />
+              <column datatype='integer' name='Violent_Crimes_2018' ordinal='2' />
+              <column datatype='integer' name='Violent_Crimes_2017' ordinal='3' />
+              <column datatype='integer' name='Violent_Crimes_2016' ordinal='4' />
+              <column datatype='integer' name='Violent_Crimes_2015' ordinal='5' />
+              <column datatype='integer' name='Violent_Crimes_2013' ordinal='6' />
+              <column datatype='integer' name='Violent_Crimes_2011' ordinal='7' />
+              <column datatype='integer' name='Property_Crimes_2018' ordinal='8' />
+              <column datatype='integer' name='Property_Crimes_2017' ordinal='9' />
+              <column datatype='integer' name='Property_Crimes_2016' ordinal='10' />
+              <column datatype='integer' name='Property_Crimes_2015' ordinal='11' />
+              <column datatype='integer' name='Property_Crimes_2013' ordinal='12' />
+              <column datatype='integer' name='Property_Crimes_2011' ordinal='13' />
+              <column datatype='integer' name='Disorder_Calls_2018' ordinal='14' />
+              <column datatype='integer' name='Disorder_Calls_2017' ordinal='15' />
+              <column datatype='integer' name='Disorder_Calls_2016' ordinal='16' />
+              <column datatype='integer' name='Disorder_Calls_2015' ordinal='17' />
+              <column datatype='integer' name='Disorder_Calls_2013' ordinal='18' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Disorder_Calls_2013]' value='[Crime by NPA.csv+].[Disorder_Calls_2013]' />
+          <map key='[Disorder_Calls_2015]' value='[Crime by NPA.csv+].[Disorder_Calls_2015]' />
+          <map key='[Disorder_Calls_2016]' value='[Crime by NPA.csv+].[Disorder_Calls_2016]' />
+          <map key='[Disorder_Calls_2017]' value='[Crime by NPA.csv+].[Disorder_Calls_2017]' />
+          <map key='[Disorder_Calls_2018]' value='[Crime by NPA.csv+].[Disorder_Calls_2018]' />
+          <map key='[Home_Ownership_2017]' value='[Housing].[Home_Ownership_2017]' />
+          <map key='[Home_Ownership_moe_2017]' value='[Housing].[Home_Ownership_moe_2017]' />
+          <map key='[Home_Sales_Price_2016]' value='[Housing].[Home_Sales_Price_2016]' />
+          <map key='[Home_Sales_Price_2018]' value='[Housing].[Home_Sales_Price_2018]' />
+          <map key='[Housing_Violations_2011]' value='[Housing].[Housing_Violations_2011]' />
+          <map key='[Housing_Violations_2013]' value='[Housing].[Housing_Violations_2013]' />
+          <map key='[Housing_Violations_2015]' value='[Housing].[Housing_Violations_2015]' />
+          <map key='[Housing_Violations_2016]' value='[Housing].[Housing_Violations_2016]' />
+          <map key='[Housing_Violations_2018]' value='[Housing].[Housing_Violations_2018]' />
+          <map key='[Housing_Violations_Total_2011]' value='[Housing].[Housing_Violations_Total_2011]' />
+          <map key='[Housing_Violations_Total_2013]' value='[Housing].[Housing_Violations_Total_2013]' />
+          <map key='[Housing_Violations_Total_2015]' value='[Housing].[Housing_Violations_Total_2015]' />
+          <map key='[Housing_Violations_Total_2016]' value='[Housing].[Housing_Violations_Total_2016]' />
+          <map key='[Housing_Violations_Total_2018]' value='[Housing].[Housing_Violations_Total_2018]' />
+          <map key='[NPA (Crime by NPA.csv+)]' value='[Crime by NPA.csv+].[NPA]' />
+          <map key='[NPA (Housing)]' value='[Housing].[NPA]' />
+          <map key='[NPA]' value='[Top 10+].[NPA]' />
+          <map key='[Property_Crimes_2011]' value='[Crime by NPA.csv+].[Property_Crimes_2011]' />
+          <map key='[Property_Crimes_2013]' value='[Crime by NPA.csv+].[Property_Crimes_2013]' />
+          <map key='[Property_Crimes_2015]' value='[Crime by NPA.csv+].[Property_Crimes_2015]' />
+          <map key='[Property_Crimes_2016]' value='[Crime by NPA.csv+].[Property_Crimes_2016]' />
+          <map key='[Property_Crimes_2017]' value='[Crime by NPA.csv+].[Property_Crimes_2017]' />
+          <map key='[Property_Crimes_2018]' value='[Crime by NPA.csv+].[Property_Crimes_2018]' />
+          <map key='[Rental_Costs_2017]' value='[Housing].[Rental_Costs_2017]' />
+          <map key='[Rental_Costs_moe_2017]' value='[Housing].[Rental_Costs_moe_2017]' />
+          <map key='[Residential_Occupancy_2017]' value='[Housing].[Residential_Occupancy_2017]' />
+          <map key='[Residential_Occupancy_moe_2017]' value='[Housing].[Residential_Occupancy_moe_2017]' />
+          <map key='[Sheet]' value='[Top 10+].[Sheet]' />
+          <map key='[Subsidized_Housing_2013]' value='[Housing].[Subsidized_Housing_2013]' />
+          <map key='[Subsidized_Housing_2017]' value='[Housing].[Subsidized_Housing_2017]' />
+          <map key='[Subsidized_Housing_Units_2013]' value='[Housing].[Subsidized_Housing_Units_2013]' />
+          <map key='[Subsidized_Housing_Units_2017]' value='[Housing].[Subsidized_Housing_Units_2017]' />
+          <map key='[Table Name (Crime by NPA.csv+)]' value='[Crime by NPA.csv+].[Table Name]' />
+          <map key='[Table Name]' value='[Top 10+].[Table Name]' />
+          <map key='[Total Crime 2018]' value='[Crime by NPA.csv+].[Total Crime 2018]' />
+          <map key='[Violent_Crimes_2011]' value='[Crime by NPA.csv+].[Violent_Crimes_2011]' />
+          <map key='[Violent_Crimes_2013]' value='[Crime by NPA.csv+].[Violent_Crimes_2013]' />
+          <map key='[Violent_Crimes_2015]' value='[Crime by NPA.csv+].[Violent_Crimes_2015]' />
+          <map key='[Violent_Crimes_2016]' value='[Crime by NPA.csv+].[Violent_Crimes_2016]' />
+          <map key='[Violent_Crimes_2017]' value='[Crime by NPA.csv+].[Violent_Crimes_2017]' />
+          <map key='[Violent_Crimes_2018]' value='[Crime by NPA.csv+].[Violent_Crimes_2018]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Top 10+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:A27:no:A1:A27:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:W463:no:A1:W463:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NPA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NPA]</local-name>
+            <parent-name>[Top 10+]</parent-name>
+            <remote-alias>NPA</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sheet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sheet]</local-name>
+            <parent-name>[Top 10+]</parent-name>
+            <remote-alias>Sheet</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Top 10+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NPA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NPA (Crime by NPA.csv+)]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>NPA</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Crime 2018</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Crime 2018]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Total Crime 2018</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Violent_Crimes_2018</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Violent_Crimes_2018]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Violent_Crimes_2018</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Violent_Crimes_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Violent_Crimes_2017]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Violent_Crimes_2017</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Violent_Crimes_2016</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Violent_Crimes_2016]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Violent_Crimes_2016</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Violent_Crimes_2015</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Violent_Crimes_2015]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Violent_Crimes_2015</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Violent_Crimes_2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Violent_Crimes_2013]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Violent_Crimes_2013</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Violent_Crimes_2011</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Violent_Crimes_2011]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Violent_Crimes_2011</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property_Crimes_2018</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Property_Crimes_2018]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Property_Crimes_2018</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property_Crimes_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Property_Crimes_2017]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Property_Crimes_2017</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property_Crimes_2016</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Property_Crimes_2016]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Property_Crimes_2016</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property_Crimes_2015</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Property_Crimes_2015]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Property_Crimes_2015</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property_Crimes_2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Property_Crimes_2013]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Property_Crimes_2013</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property_Crimes_2011</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Property_Crimes_2011]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Property_Crimes_2011</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Disorder_Calls_2018</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Disorder_Calls_2018]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Disorder_Calls_2018</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Disorder_Calls_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Disorder_Calls_2017]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Disorder_Calls_2017</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Disorder_Calls_2016</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Disorder_Calls_2016]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Disorder_Calls_2016</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Disorder_Calls_2015</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Disorder_Calls_2015]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Disorder_Calls_2015</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Disorder_Calls_2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Disorder_Calls_2013]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Disorder_Calls_2013</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name (Crime by NPA.csv+)]</local-name>
+            <parent-name>[Crime by NPA.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NPA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NPA (Housing)]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>NPA</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home_Sales_Price_2018</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home_Sales_Price_2018]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Home_Sales_Price_2018</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home_Sales_Price_2016</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home_Sales_Price_2016]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Home_Sales_Price_2016</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_2018</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Housing_Violations_2018]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_2018</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_Total_2018</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Housing_Violations_Total_2018]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_Total_2018</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_2016</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Housing_Violations_2016]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_2016</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_Total_2016</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Housing_Violations_Total_2016]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_Total_2016</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_2015</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Housing_Violations_2015]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_2015</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_Total_2015</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Housing_Violations_Total_2015]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_Total_2015</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_2013</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Housing_Violations_2013]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_2013</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_Total_2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Housing_Violations_Total_2013]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_Total_2013</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_2011</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Housing_Violations_2011]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_2011</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing_Violations_Total_2011</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Housing_Violations_Total_2011]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Housing_Violations_Total_2011</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subsidized_Housing_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Subsidized_Housing_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Subsidized_Housing_2017</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subsidized_Housing_Units_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Subsidized_Housing_Units_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Subsidized_Housing_Units_2017</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subsidized_Housing_2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Subsidized_Housing_2013]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Subsidized_Housing_2013</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subsidized_Housing_Units_2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Subsidized_Housing_Units_2013]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Subsidized_Housing_Units_2013</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home_Ownership_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home_Ownership_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Home_Ownership_2017</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home_Ownership_moe_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home_Ownership_moe_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Home_Ownership_moe_2017</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residential_Occupancy_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Residential_Occupancy_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Residential_Occupancy_2017</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residential_Occupancy_moe_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Residential_Occupancy_moe_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Residential_Occupancy_moe_2017</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rental_Costs_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rental_Costs_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Rental_Costs_2017</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rental_Costs_moe_2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rental_Costs_moe_2017]</local-name>
+            <parent-name>[Housing]</parent-name>
+            <remote-alias>Rental_Costs_moe_2017</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Disorder Calls 2013' datatype='integer' name='[Disorder_Calls_2013]' role='measure' type='quantitative' />
+      <column caption='Disorder Calls 2015' datatype='integer' name='[Disorder_Calls_2015]' role='measure' type='quantitative' />
+      <column caption='Disorder Calls 2016' datatype='integer' name='[Disorder_Calls_2016]' role='measure' type='quantitative' />
+      <column caption='Disorder Calls 2017' datatype='integer' name='[Disorder_Calls_2017]' role='measure' type='quantitative' />
+      <column caption='Disorder Calls 2018' datatype='integer' name='[Disorder_Calls_2018]' role='measure' type='quantitative' />
+      <column caption='Home Ownership 2017' datatype='integer' name='[Home_Ownership_2017]' role='measure' type='quantitative' />
+      <column caption='Home Ownership moe 2017' datatype='integer' name='[Home_Ownership_moe_2017]' role='measure' type='quantitative' />
+      <column caption='Home Sales Price 2016' datatype='integer' name='[Home_Sales_Price_2016]' role='measure' type='quantitative' />
+      <column caption='Home Sales Price 2018' datatype='integer' name='[Home_Sales_Price_2018]' role='measure' type='quantitative' />
+      <column caption='Housing Violations 2011' datatype='real' name='[Housing_Violations_2011]' role='measure' type='quantitative' />
+      <column caption='Housing Violations 2013' datatype='real' name='[Housing_Violations_2013]' role='measure' type='quantitative' />
+      <column caption='Housing Violations 2015' datatype='real' name='[Housing_Violations_2015]' role='measure' type='quantitative' />
+      <column caption='Housing Violations 2016' datatype='real' name='[Housing_Violations_2016]' role='measure' type='quantitative' />
+      <column caption='Housing Violations 2018' datatype='real' name='[Housing_Violations_2018]' role='measure' type='quantitative' />
+      <column caption='Housing Violations Total 2011' datatype='integer' name='[Housing_Violations_Total_2011]' role='measure' type='quantitative' />
+      <column caption='Housing Violations Total 2013' datatype='integer' name='[Housing_Violations_Total_2013]' role='measure' type='quantitative' />
+      <column caption='Housing Violations Total 2015' datatype='integer' name='[Housing_Violations_Total_2015]' role='measure' type='quantitative' />
+      <column caption='Housing Violations Total 2016' datatype='integer' name='[Housing_Violations_Total_2016]' role='measure' type='quantitative' />
+      <column caption='Housing Violations Total 2018' datatype='integer' name='[Housing_Violations_Total_2018]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[NPA]' role='measure' type='quantitative' />
+      <column caption='Property Crimes 2011' datatype='integer' name='[Property_Crimes_2011]' role='measure' type='quantitative' />
+      <column caption='Property Crimes 2013' datatype='integer' name='[Property_Crimes_2013]' role='measure' type='quantitative' />
+      <column caption='Property Crimes 2015' datatype='integer' name='[Property_Crimes_2015]' role='measure' type='quantitative' />
+      <column caption='Property Crimes 2016' datatype='integer' name='[Property_Crimes_2016]' role='measure' type='quantitative' />
+      <column caption='Property Crimes 2017' datatype='integer' name='[Property_Crimes_2017]' role='measure' type='quantitative' />
+      <column caption='Property Crimes 2018' datatype='integer' name='[Property_Crimes_2018]' role='measure' type='quantitative' />
+      <column caption='Rental Costs 2017' datatype='integer' name='[Rental_Costs_2017]' role='measure' type='quantitative' />
+      <column caption='Rental Costs moe 2017' datatype='integer' name='[Rental_Costs_moe_2017]' role='measure' type='quantitative' />
+      <column caption='Residential Occupancy 2017' datatype='integer' name='[Residential_Occupancy_2017]' role='measure' type='quantitative' />
+      <column caption='Residential Occupancy moe 2017' datatype='integer' name='[Residential_Occupancy_moe_2017]' role='measure' type='quantitative' />
+      <column caption='Subsidized Housing 2013' datatype='integer' name='[Subsidized_Housing_2013]' role='measure' type='quantitative' />
+      <column caption='Subsidized Housing 2017' datatype='integer' name='[Subsidized_Housing_2017]' role='measure' type='quantitative' />
+      <column caption='Subsidized Housing Units 2013' datatype='integer' name='[Subsidized_Housing_Units_2013]' role='measure' type='quantitative' />
+      <column caption='Subsidized Housing Units 2017' datatype='integer' name='[Subsidized_Housing_Units_2017]' role='measure' type='quantitative' />
+      <column aggregation='None' datatype='integer' name='[Total Crime 2018 (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='2' formula='[Total Crime 2018]' peg='0' size='105' />
+      </column>
+      <column datatype='integer' name='[Total Crime 2018]' role='measure' type='quantitative' />
+      <column caption='Violent Crimes 2011' datatype='integer' name='[Violent_Crimes_2011]' role='measure' type='quantitative' />
+      <column caption='Violent Crimes 2013' datatype='integer' name='[Violent_Crimes_2013]' role='measure' type='quantitative' />
+      <column caption='Violent Crimes 2015' datatype='integer' name='[Violent_Crimes_2015]' role='measure' type='quantitative' />
+      <column caption='Violent Crimes 2016' datatype='integer' name='[Violent_Crimes_2016]' role='measure' type='quantitative' />
+      <column caption='Violent Crimes 2017' datatype='integer' name='[Violent_Crimes_2017]' role='measure' type='quantitative' />
+      <column caption='Violent Crimes 2018' datatype='integer' name='[Violent_Crimes_2018]' role='measure' type='quantitative' />
+      <column-instance column='[NPA]' derivation='CountD' name='[ctd:NPA:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Home_Sales_Price_2018]' derivation='Median' name='[med:Home_Sales_Price_2018:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NPA]' derivation='None' name='[none:NPA:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NPA]' derivation='Sum' name='[sum:NPA:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total Crime 2018]' derivation='Sum' name='[sum:Total Crime 2018:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[__tableau_internal_object_id__].[cnt:Parcel_SalesData.txt_38E2354008DA4FF19507721246ED744B:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[ctd:NPA:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:Home_Sales_Price_2018 (Housing1):qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:NPA:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Home_Sales_Price_2018 (Housing1):qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:NPA (Sheet1+):qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:NPA:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:Home_Sales_Price_2018:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Home_Sales_Price_2018:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[avg:Total Crime 2018:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[cnt:Total Crime 2018:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Total Crime 2018:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Home_Sales_Price_2016:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[attr:NPA (HotSpots.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[avg:amt_Price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:amt_Price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:NPA (HotSpots.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:amt_Price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:NPA (HotSpots.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Property_Crimes_2017:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Violent_Crimes_2017:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Crime - Sales NPA Correlation'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Parcel_SalesData.txt+ (Multiple Connections)' name='federated.1nn3bgi1wzq8ow1286ofr006cn2o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nn3bgi1wzq8ow1286ofr006cn2o'>
+            <column caption='Home Sales Price 2018' datatype='integer' name='[Home_Sales_Price_2018]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[NPA]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total Crime 2018]' role='measure' type='quantitative' />
+            <column-instance column='[Home_Sales_Price_2018]' derivation='Median' name='[med:Home_Sales_Price_2018:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NPA]' derivation='None' name='[none:NPA:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total Crime 2018]' derivation='Sum' name='[sum:Total Crime 2018:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:NPA:qk]' included-values='in-range'>
+            <min>5</min>
+            <max>385</max>
+          </filter>
+          <slices>
+            <column>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:NPA:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Total Crime 2018:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:Home_Sales_Price_2018:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:Home_Sales_Price_2018:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:Home_Sales_Price_2018:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:Home_Sales_Price_2018:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Total Crime 2018:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1nn3bgi1wzq8ow1286ofr006cn2o].[med:Home_Sales_Price_2018:qk] + [federated.1nn3bgi1wzq8ow1286ofr006cn2o].[sum:Total Crime 2018:qk])</rows>
+        <cols>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:NPA:qk]</cols>
+      </table>
+      <simple-id uuid='{C27596B6-6C67-45FC-A981-C1C8E51F9E33}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='51'>
+    <window class='worksheet' maximized='true' name='Crime - Sales NPA Correlation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='143'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[:Measure Names]</field>
+            <field>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:Calculation_282319447473037312:qk]</field>
+            <field>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:Calculation_282319447473082369:qk]</field>
+            <field>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:Jurisdiction:nk]</field>
+            <field>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:NPA (HotSpots.csv):qk]</field>
+            <field>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[none:Total Crime 2018 (bin):qk]</field>
+            <field>[federated.1nn3bgi1wzq8ow1286ofr006cn2o].[yr:dte_DateofSale:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AA829ECA-78A7-4C6D-935C-A3DF97020FA5}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Crime - Sales NPA Correlation' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
